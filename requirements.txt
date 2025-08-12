@@ -1,0 +1,11 @@
+colorama
+pyfiglet
+rich
+requests
+aiohttp
+bs4
+lxml
+dnspython
+python-nmap
+paramiko
+gitpython
