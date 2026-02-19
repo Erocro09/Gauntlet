@@ -1,83 +1,85 @@
-# ðŸ›¡ï¸ Gauntlet â€” Offensive Security Framework  
-**Developed by Ero09**  
+```markdown
+# Gauntlet Security Framework
 
-Gauntlet is a **multi-mode offensive security tool** built for real-world penetration testing and red team operations.  
-It integrates enumeration, exploitation, cracking, and bypass techniques into one seamless CLI interface â€” optimized for both beginners and seasoned operators.  
+<p align="center">
+ ██████╗██╗   ██╗██████╗ ███████╗██████╗     ██████╗ ███████╗ █████╗ ██████╗ 
+██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝██╔══██╗██╔══██╗
+██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝    ██████╔╝█████╗  ███████║██║  ██║
+██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗    ██╔══██╗██╔══╝  ██╔══██║██║  ██║
+╚██████╗   ██║   ██████╔╝███████╗██║  ██║    ██║  ██║███████╗██║  ██║██████╔╝
+ ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ 
+</p>
 
----
+## Overview
 
-## ðŸš€ Features
-- **Modes**:
-  - **Basic** â€“ Lightweight scan for common issues
-  - **Intermediate** â€“ Deeper enumeration & vulnerability checks
-  - **Advanced** â€“ Intrusive tests, async scanning, extended payloads
-  - **Pro** â€“ Full arsenal with exploit modules, cracking, and bypass
-  - **God** â€“ Hidden mode, no rate limits, everything unlocked (`--GOD` flag)
+Gauntlet is a comprehensive offensive security framework designed for penetration testers and security 
+researchers.
 
-- **Modules**:
-  - Subdomain enumeration (assetfinder, amass-like)
-  - Port scanning (Nmap via python-nmap)
-  - OWASP Top 10 audit
-  - WAF detection & bypass
-  - Bruteforce & cracking
-  - DDoS feasibility checks
-  - Exploit triggers (manual run)
-  - Payload obfuscation & WAF evasion
+## Features
 
-- **Payload Arsenal**:
-  - SecLists  
-  - PayloadsAllTheThings  
-  - FuzzDB  
-  - Offensive-Payloads  
-  - Custom bypass lists & 0day patterns
+- Subdomain Enumeration
+- Port Scanning
+- OWASP Top 10 Auditing
+- WAF Detection
+- Vulnerability Scanner
+- OSINT Gathering
+- Multiple Operation Modes (Basic, Advanced, GOD)
 
-- **Compatibility**:
-  - Runs on **Linux**, **Termux**, and cloud shells
-  - Works offline after setup â€” payloads bundled locally
+## Installation
 
----
+### Quick Install (Linux/macOS)
 
-## ðŸ“¦ Installation
 ```bash
-git clone https://github.com/<your-username>/Gauntlet.git
-cd Gauntlet
 chmod +x install_gauntlet.sh
 ./install_gauntlet.sh
 ```
 
----
+### Manual Install
 
-## ðŸ•¹ï¸ Usage
 ```bash
-python3 Gauntlet.py
+pip install -r requirements.txt
+python3 gauntlet.py
 ```
 
-**God Mode** (hidden):
+## Usage
+
 ```bash
-python3 Gauntlet.py --GOD
+# Interactive mode
+python3 gauntlet.py
+
+# Specify target
+python3 gauntlet.py -t target.com
+
+# Specify mode
+python3 gauntlet.py -m advanced
+
+# GOD MODE
+python3 gauntlet.py --god
 ```
 
----
+## Menu Options
 
-## ðŸ“œ Example Commands
-```bash
-# Basic scan
-python3 Gauntlet.py
+| # | Module | Description |
+|---|--------|-------------|
+| 1 | Subdomain Enumeration | Discover subdomains |
+| 2 | Port Scan | Scan ports |
+| 3 | OWASP Top 10 | Web vulnerability audit |
+| 4 | WAF Detection | Detect WAF |
+| 5 | Vulnerability Scanner | Find vulnerabilities |
+| 6 | OSINT | Gather intelligence |
+| 7 | List Payloads | Show available payloads |
 
-# Advanced scan on example.com
-python3 Gauntlet.py --mode advanced --target example.com
+## Requirements
 
-# God mode, full arsenal
-python3 Gauntlet.py --GOD --target example.com
+- Python 3.8+
+- Rich library
+- Requests library
+
+## Disclaimer
+
+This tool is for authorized security testing only. Misuse is prohibited.
+
+## License
+
+MIT License - See LICENSE file
 ```
-
----
-
-## âš ï¸ Disclaimer
-This tool is for **authorized security testing only**.  
-You are responsible for ensuring you have permission before running Gauntlet on any target.
-
----
-
-### ðŸ’» Developed by: **Ero09**
-> *"When the gauntlet drops, no vuln hides."*
